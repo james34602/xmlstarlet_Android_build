@@ -27,7 +27,7 @@ fi;
 
 # Set up Android NDK
 echo "Fetching $NDK_ROOT"
-[ -f "$NDK_ROOT-linux-x86_64.zip" ] || wget https://dl.google.com/android/repository/$NDK_ROOT-$plat-x86_64.zip
+[ -f "$NDK_ROOT-linux-x86_64.zip" ] || wget https://dl.google.com/android/repository/`basename $NDK_ROOT`-$plat-x86_64.zip
 [ -d "$NDK_ROOT" ] || unzip -o $NDK_ROOT-$plat-x86_64.zip
 
 # Build
